@@ -1,325 +1,76 @@
-body {
-	margin: 0;
-	background: #222;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
-}
-
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
-
-header {
-  background: #4dc29b;
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.logo {
-  float: left;
-  padding: 10px 0;
-}
-
-nav {
-  float: right;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
-  position: relative;
-}
-
-nav a {
-  color: #444;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #444;
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-  width: 100%;
-}
-
-.rbox {
-    border-radius: 25px;
-    border: 2px solid purple;
-    padding: 1px;
-    margin: 20px;
-    width: 200px;
-    height: 250px;
-    float: left;
-}
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  background-color: rgb(83, 129, 174);
-  justify-content: space-evenly;
-  width: 100%;
-}
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 300px;
-  text-align: center;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
-
-.grey > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow:auto; 
-  max-height: 100%;
-}
-
-
-
-img {
-  max-height: 100%;
-  max-width: 100%;
-  width: 100%;
-}
-
-
-
-
-/* Create three columns of equal width */
-.columns {
-  width: 33.3%;
-  padding: 8px;
-  left: -45%;
-  background: #808080;
-}
-
-/* Style the list */
-.price {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-/* Add shadows on hover */
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-/* Pricing header */
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+  }
   
-/* List items */
-.price li {
-  border-bottom: 1px solid lightgrey;
-  padding: 10px;
-  text-align: center;
-  background-color: lightgrey;
-}
-
-
-.grey {
-  height: 100%;
-}
-
-
-/* The "Sign Up" button */
-.button {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  overflow: hidden;
-}
-
-
-
-
-
-
-
-.slideshow-container {
-  max-width: 1000px;
-  display: flex;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  width: 100%;
-  align-content: stretch;
-}
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.4s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+  }
+  .bgimg-1 {
+    background-image: url('/picky2.png');
+    min-height: 100%;
+  }
+  
+  .bgimg-2 {
+    background-image: url('/glasses.jpg');
+    min-height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url('/work.jpg');
+    min-height: 400px;
+  }
 
-/* Position the "next button" to the right */
-.next {
-  right: -50px;
-  border-radius: 3px 0 0 3px;
-}
+  .bgimg-4 {
+    background-image: url('/contact.jpg');
+    min-height: 300px;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
 
-.prev {
-  left: -50px;
-  border-radius: 3px 0 0 3px;
-}
+  .info {
+    text-align: center;
+  }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+  
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+  }
+  
+  .title {
 
-/* Caption text */
-.text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  width: 75%;
-  text-align: center;
-  margin: 0;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ffffff;
-  border: 3px solid #2f775f;
-  overflow-wrap: break-word;
-  opacity: .9;
-}
+    text-decoration: underline;
+  }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: .35s;
-}
-
-@keyframes fade {
-  from {opacity: .9}
-  to {opacity: 1}
-}
-
-#firstSlideText {
-  text-align: center;
-  margin: auto;
-  border: 3px solid #2f775f;
-  padding: 10px;
-}
-
-#namehid {
-  font-size: 3vw;
-  font-family: Impact, fantasy;
-  float: left;
-  padding-left: 10px;
-}
-
-#workwrap {
-  overflow: hidden;
-  top: 40%;
-}
-
-#colwrap {
-  justify-content: center;
-  width: 100%;
-}
-
-.desc {
-  background: #ffffff;
-  border-width: 10px;
-}
-
-.describer {
-  background: rgb(241, 238, 238);
-  border-style: solid;
-  border-width: 2px;
-}
-
-.windowimg {
-  background-color: lightgrey;
-}
-
-.title {
-  font-size: 1.875em;
-  text-decoration: underline;
-}
-
-.expHeader {
-  font-size: 2.5em;
-}
-
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
